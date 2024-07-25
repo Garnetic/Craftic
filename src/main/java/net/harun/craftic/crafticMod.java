@@ -15,6 +15,14 @@ import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
+import baritone.api.BaritoneAPI;
+import baritone.api.IBaritone;
+import net.minecraft.client.Minecraft;
+import net.minecraftforge.client.event.ClientChatEvent;
+import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.fml.common.Mod.EventBusSubscriber;
+import net.minecraftforge.event.ServerChatEvent;
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(crafticMod.MOD_ID)
 public class crafticMod
@@ -23,6 +31,8 @@ public class crafticMod
     public static final String MOD_ID = "craftic";
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
+
+    private final IBaritone baritone = BaritoneAPI.getProvider().getPrimaryBaritone();
 
     public crafticMod()
     {
