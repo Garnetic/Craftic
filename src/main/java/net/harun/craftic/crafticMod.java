@@ -32,7 +32,8 @@ public class crafticMod
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
-    private final IBaritone baritone = BaritoneAPI.getProvider().getPrimaryBaritone();
+    // This line breaks it TODO
+    // private final IBaritone baritone = BaritoneAPI.getProvider().getPrimaryBaritone();
 
     public crafticMod()
     {
